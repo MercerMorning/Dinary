@@ -1,0 +1,202 @@
+body {
+  max-width: 1200px;
+  min-width: 300px;
+  margin-left: 5%; }
+
+#head {
+  height: 10px;
+  width: 100%;
+  background-color: #000;
+  display: block;
+  margin-top: -10px; }
+
+#part {
+  height: 400px;
+  width: 100%;
+  background-color: grey;
+  display: block; }
+  #part #slider {
+    position: relative;
+    text-align: center;
+    top: 120px;
+    margin: 0 auto; }
+    #part #slider article {
+      width: 20%;
+      float: left; }
+      #part #slider article img {
+        width: 100%; }
+    #part #slider .image {
+      width: 500%;
+      line-height: 0; }
+  #part #overflow {
+    width: 100%;
+    overflow: hidden; }
+  #part #desktop:checked ~ #slider {
+    max-width: 960px; }
+  #part #switch1:checked ~ #controls label:nth-child(3),
+  #part #switch1:checked ~ #controls label:nth-child(1),
+  #part #switch1:checked ~ #controls label:nth-child(2) {
+    background: url("prev.png") no-repeat;
+    float: left;
+    margin: 0 0 0 -84px;
+    display: block;
+    height: 68px;
+    width: 68px; }
+  #part #switch1:checked ~ #controls label:nth-child(2),
+  #part #switch1:checked ~ #controls label:nth-child(3),
+  #part #switch1:checked ~ #controls label:nth-child(1) {
+    background: url("next.png") no-repeat;
+    float: left;
+    margin: 0 -84px 0 0px;
+    display: block;
+    height: 68px;
+    width: 68px; }
+  #part label, #part a {
+    cursor: pointer; }
+  #part .all input {
+    display: none; }
+  #part #switch1:checked ~ #slides .image {
+    margin-left: 0; }
+  #part #switch2:checked ~ #slides .image {
+    margin-left: -100%; }
+  #part #switch3:checked ~ #slides .image {
+    margin-left: -200%; }
+  #part #controls {
+    margin: -25% 0 0 0;
+    width: 100%;
+    height: 50px; }
+    #part #controls label:hover {
+      opacity: 0.6; }
+    #part #controls label {
+      transition: opacity 0.2s ease-out; }
+  #part #active {
+    margin: 23% 0 0;
+    text-align: center; }
+    #part #active label {
+      border-radius: 10px;
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background: #bbb; }
+    #part #active label:hover {
+      background: #76c8ff;
+      border-color: #777 !important; }
+  #part #switch1:checked ~ #active label:nth-child(1) {
+    background: #18a3dd;
+    border-color: #18a3dd !important; }
+  #part #switch2:checked ~ #active label:nth-child(2) {
+    background: #18a3dd;
+    border-color: #18a3dd !important; }
+  #part #switch3:checked ~ #active label:nth-child(3) {
+    background: #18a3dd;
+    border-color: #18a3dd !important; }
+  #part #slides .image {
+    transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1); }
+
+#part2 {
+  height: 400px;
+  width: 100%;
+  background-color: grey;
+  display: block; }
+  #part2 #blocks {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+    top: 130px;
+    left: 13%; }
+    #part2 #blocks #cute {
+      width: 17%;
+      height: 50%;
+      background-color: #fff;
+      position: relative;
+      margin-left: 60px;
+      margin-right: 50px; }
+    #part2 #blocks #cute:before {
+      content: "fdfdf";
+      position: relative;
+      right: 50px; }
+  #part2 span {
+    color: #fff;
+    position: relative;
+    top: 110px;
+    left: 120px;
+    font-size: 30px; }
+
+#map iframe {
+  width: 100%; }
+
+.container {
+  margin: 50px auto;
+  width: 640px; }
+  .container .cal {
+    margin: 0 auto; }
+
+.cal {
+  display: block;
+  width: 216px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); }
+  .cal caption {
+    display: block;
+    line-height: 32px;
+    font-weight: bold;
+    color: #e2e2e2;
+    text-align: center;
+    text-shadow: 0 -1px black;
+    background: #333;
+    background: rgba(0, 0, 0, 0.35);
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #313131;
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.04); }
+    .cal caption a {
+      display: block;
+      line-height: 32px;
+      padding: 0 10px;
+      font-size: 15px;
+      color: #e2e2e2; }
+    .cal caption a:hover {
+      color: #fff; }
+    .cal caption .next {
+      float: right; }
+  .cal th, .cal td {
+    width: 30px;
+    text-align: center;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.8); }
+  .cal th:first-child, .cal td:first-child {
+    border-left: 0; }
+  .cal th {
+    line-height: 20px;
+    font-size: 8px;
+    color: #696969;
+    text-transform: uppercase;
+    background: #f3f3f3;
+    border-left: 1px solid #f3f3f3; }
+  .cal td {
+    font-size: 11px;
+    font-weight: bold;
+    border-top: 1px solid #c2c2c2;
+    border-left: 1px solid #c2c2c2; }
+    .cal td a {
+      clear: both;
+      display: block;
+      position: relative;
+      width: 30px;
+      line-height: 28px;
+      color: #666;
+      background-image: linear-gradient(to bottom, #eaeaea 0%, #e5e5e5 60%, #d9d9d9 100%);
+      box-shadow: inset 1px 1px rgba(255, 255, 255, 0.5); }
+      .cal td a td a:hover, .cal td a td.off a {
+        background: #f3f3f3; }
+      .cal td a td.off a {
+        color: #b3b3b3; }
+  .cal td.active:first-child a, .cal td:first-child a:active {
+    border-left: 0;
+    margin-left: 0; }
+  .cal td.active:last-child a, .cal td:last-child a:active {
+    border-right: 0;
+    margin-right: 0; }
+  .cal tr:last-child td.active a, .cal .cal tr:last-child td a:active {
+    border-bottom: 0;
+    margin-bottom: 0; }
+  .cal a {
+    text-decoration: none; }
